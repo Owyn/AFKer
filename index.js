@@ -1,7 +1,7 @@
 
 module.exports = function AFKer(dispatch) {
 	let enabled = true,
-		lasttimemoved = null;
+		lasttimemoved = Date.now();
 	
 	dispatch.hook('C_PLAYER_LOCATION', 5, (event) => {
 		if(event.type === 0) // running
