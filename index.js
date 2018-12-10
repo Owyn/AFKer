@@ -1,4 +1,3 @@
-const Command = require('command')
 
 module.exports = function AFKer(dispatch) {
 	let enabled = true,
@@ -19,7 +18,7 @@ module.exports = function AFKer(dispatch) {
 	// ### Chat Hook ### //
 	// ################# //
 	
-	const command = Command(dispatch)
+	const command = dispatch.command
 	command.add('afk', () => {
 		enabled = !enabled;
 		command.message('[AFKer] ' + (enabled ? '<font color="#56B4E9">enabled</font>' : '<font color="#E69F00">disabled</font>'));
