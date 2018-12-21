@@ -19,7 +19,7 @@ module.exports = function AFKer(dispatch) {
 	// ################# //
 	
 	const command = dispatch.command
-	command.add('afk', () => {
+	command.add('afker', () => {
 		enabled = !enabled;
 		command.message('[AFKer] ' + (enabled ? '<font color="#56B4E9">enabled</font>' : '<font color="#E69F00">disabled</font>'));
 		console.log('[AFKer] ' + (enabled ? 'enabled' : 'disabled'));
