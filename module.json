@@ -1,11 +1,11 @@
 {
 	"disableAutoUpdate": false,
-	"name": "AA-Guide",
+	"name": "AFKer",
 	"author": "Owyn",
-	"description": "Antaroth’s Abyss guide for 3rd boss",
+	"description": "AFK check will not kick you out of the game after 1h",
 	"options": {
-		"niceName": "AA-Guide"
+		"niceName": "AFKer"
 	},
-	"servers": ["https://raw.githubusercontent.com/Owyn/aaguide/master/"],
-	"supportUrl": "https://github.com/Owyn/aaguide/issues"
+	"servers": ["https://raw.githubusercontent.com/Owyn/AFKer/master/"],
+	"supportUrl": "https://github.com/Owyn/AFKer/issues"
 }
