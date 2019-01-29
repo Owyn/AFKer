@@ -1,30 +1,29 @@
-<img src=http://u.cubeupload.com/Owyn/ItemHelper.jpg>
+# AFKer
+A tera-proxy module that prevents you from getting back to the character select screen. 
+This has the side effect that the server's AFK check will not kick you out of the game.  
 
-# AA-Guide
+## Usage  
+The script is enabled by default and will prevent you from getting logged out when you are standing still for an hour.  
+Simply moving your character will make you able to go back to character selection and reset the 1 hour timer.  
 
-SCRIPT BY OWYN - For TERA
-Credits to teralove and soler91 and SHINOYX for their guides
+While in game, open a proxy chat session by typing "/proxy" or "/8" in chat and hitting the space bar.  
+This serves as the script's command interface.  
+The following commands are supported:  
 
-Call out attacks from Antaroth Abyss last boss including both NORMAL MODE & HARD MODE
+* afker - enable/disable AFKer  
 
-*Script automatically detects bosses and which dungeon hard or normal.
+## Safety
+Whatever you send to the proxy chat in game is intercepted client-side. The chat is NOT sent to the server.  
 
-Please report any issues to me either here or on discord :)
-
-# Commands 
-Only usable in the Antaroth Map. Using of commands outside map will return undefine command.
-- !aaguide to toggle module (DEFAULT: ON)
-- !toparty to toggle party notice (DEFAULT: SELF ONLY (In notice chat))
-- !toparty stream - to toggle messages being sent only to proxy channel, also disables itemhelp (DEFAULT: OFF)
-- !itemhelp - turns off\on placing signs on safe spots for right\left swings (DEFAULT: ON)
-
-# Attacks announced
-- Front, Back stun
-- Back Stun
-- Right Safe , OUT safe (Right before the SPIN attack, normally you'd know which side is safe during the spin)
-- Left Safe , IN safe (Right before the SPIN attack, normally you'd know which side is safe during the spin)
-
-# Notes
-- Left/Right message is announced from Boss POV (aka for DPS guys) - all guides do the same (rk9 guide for last boss for example), so tanks would have to do the opposite, it's not hard, just use itemhelp signs which are placed in safe spots (or your brain lol).
-- To change any message - edit index.js with notepad and then rename\delete module.json so it won't autoupdate to how it was before
-
+## Changelog
+### 1.2.1
+* [*] Some code cleanup
+* [*] Full conversion to Pinkie Pie's command module
+### 1.2.0
+* [+] AFKer will now activate itself after standing still for an hour
+* [*] AFKer is now enabled by default
+* [+] Added support for Pinkie Pie's command module which is now a requirement
+### 1.1.0
+* [+] Added !afk command to toggle between "on" and "off" in non-whisper chats
+### 1.0.0
+* [*] Initial Release
