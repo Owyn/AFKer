@@ -1,12 +1,14 @@
 {
-	"files": {
-		"LICENSE": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
-		"README.md": "5ce14dd73a083354f0d3dc712236bafc409f966ced09f030c841536fe0c86d34",
-		"index.js": "20ef052511dccd8b166b413d3e7f9699eb6b40d63a84526b40c56451643283a2",
-		"module.json": "f1a12bbb0190daa4276f7528afdb93e8b79a958ac5dc7f548d9a2df6d50416cf"
-	},
-	"defs": {
-		"C_PLAYER_LOCATION": 5,
-		"C_RETURN_TO_LOBBY": "raw"
-	}
+    "files": {
+        "LICENSE": "53927bd0b739d38c87a0a82236fd9b070c2dfff11c0c119be50372005d5047ad",
+        "README.md": "5ce14dd73a083354f0d3dc712236bafc409f966ced09f030c841536fe0c86d34",
+        "config.json": "176b0d22b4419dcb45fa38040519c2a0943372115fe8929732850e053efb898c",
+        "index.js": "41b1c31441687c25ff88a4c06b734a8b3757e82e28624b614f6827df3cc130c8",
+        "module.json": "d3d4f3ab76bb182d4b0498bf53ee880424fa87c85eadcd0a7e6a94984cb924e4",
+        "settings_migrator.js": "77bbbf8d079814079808dda90967b12e306a56052b9b01d0ad1d3c17ed2110ab"
+    },
+    "defs": {
+        "C_PLAYER_LOCATION": 5,
+        "C_RETURN_TO_LOBBY": "raw"
+    }
 }
