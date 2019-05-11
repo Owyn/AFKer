@@ -1,11 +1,20 @@
 {
-	"disableAutoUpdate": false,
-	"name": "AFKer",
-	"author": "Owyn",
-	"description": "AFK check will not kick you out of the game after 1h",
-	"options": {
-		"niceName": "AFKer"
-	},
-	"servers": ["https://raw.githubusercontent.com/Owyn/AFKer/master/"],
-	"supportUrl": "https://github.com/Owyn/AFKer/issues"
+    "disableAutoUpdate": false,
+    "name": "AFKer",
+    "author": "Owyn",
+    "description": "AFK check will not kick you out of the game after 1h",
+    "options": {
+        "niceName": "AFKer",
+        "guiName": "AFKer",
+        "reloadable": true,
+        "settingsVersion": 81.3,
+        "settingsFile": "config.json",
+        "settingsMigrator": "settings_migrator.js"
+    },
+    "servers": ["https://raw.githubusercontent.com/Owyn/AFKer/master/"],
+    "supportUrl": "https://github.com/Owyn/AFKer/issues",
+    "packets": {
+        "C_PLAYER_LOCATION": 5,
+        "C_RETURN_TO_LOBBY": "raw"
+    }
 }

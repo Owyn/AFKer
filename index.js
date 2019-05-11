@@ -1,26 +1,28 @@
-module.exports = function AFKer(dispatch) {
-	let enabled = true,
-		lasttimemoved = Date.now();
+module.exports = function AFKer(mod) {
+	let lastTimeMoved = Date.now();
+	const settings = mod.settings,
+		command = mod.command;
 
-	dispatch.hook('C_PLAYER_LOCATION', 5, (event) => {
-		if(event.type === 0) // running
-		{
-			lasttimemoved = Date.now(); 
+	mod.hook('C_PLAYER_LOCATION', 5, (event) => {
+		if([0,1,5,6].indexOf(event.type) > -1) { // running / walking / jumping / jumping
+			lastTimeMoved = Date.now();
 		}
 	})
 
-	dispatch.hook('C_RETURN_TO_LOBBY', 'raw', () => {
-		if (enabled && Date.now() - lasttimemoved >= 3600000) return false; // Prevents you from being automatically logged out while AFK
+	mod.hook('C_RETURN_TO_LOBBY', 'raw', () => {
+		if (settings.enabled && Date.now() - lastTimeMoved >= 3600000) return false; // Prevents you from being automatically logged out while AFK
 	})
 
-	// ################# //
-	// ### Chat Hook ### //
-	// ################# //
+	command.add('afker', {
+		$default() {
+			settings.enabled = !settings.enabled;
+			mod.saveSettings();
+			command.message(`${settings.enabled ? 'En' : 'Dis'}abled`);
+		}
+	});
 
-	const command = dispatch.command
-	command.add('afker', () => {
-		enabled = !enabled;
-		command.message('[AFKer] ' + (enabled ? '<font color="#56B4E9">enabled</font>' : '<font color="#E69F00">disabled</font>'));
-		console.log('[AFKer] ' + (enabled ? 'enabled' : 'disabled'));
-	})
-} 
+	this.destructor = () => {
+		lastTimeMoved = null;
+		command.remove('afker');
+	}
+}
